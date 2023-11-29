@@ -1,0 +1,11 @@
+.add-fruit {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 250px;
+}
+
+button:hover {
+    cursor: pointer;
+}
