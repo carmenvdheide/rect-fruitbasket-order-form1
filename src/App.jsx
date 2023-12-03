@@ -1,6 +1,7 @@
 
 import './App.css'
 import {useState} from "react";
+import Counter from "./components/counter/counter.jsx";
 
 function App() {
 const [numberStrawberries, setNumberStrawberries] = useState(0)
@@ -18,6 +19,8 @@ const [formState, setFormState] = useState({
     comments: ' ',
     conditions: ' ',
 })
+
+
 
 function reset() {
     setNumberStrawberries(0)
@@ -54,27 +57,43 @@ function submit(e) {
             <h1>Fruitmand bezorgservice</h1>
             <section className="add-fruit">
                 <p>Aardbeien</p>
-                <button type="button" onClick={() => numberStrawberries > 0 ? setNumberStrawberries(numberStrawberries - 1) : setNumberStrawberries(0)}>-</button>
+                <button
+                    type="button"
+                    onClick={() => numberStrawberries > 0 ? setNumberStrawberries(numberStrawberries - 1) : setNumberStrawberries(0)}>-</button>
                 <p>{numberStrawberries}</p>
-                <button type="button" onClick={() => setNumberStrawberries(numberStrawberries + 1)}>+</button>
+                <button
+                    type="button"
+                    onClick={() => setNumberStrawberries(numberStrawberries + 1)}>+</button>
             </section>
             <section className="add-fruit">
                 <p>Bananen</p>
-                <button type="button" onClick={() => numberBananas > 0 ? setNumberBananas(numberBananas - 1) : setNumberBananas(0)}>-</button>
+                <button
+                    type="button"
+                    onClick={() => numberBananas > 0 ? setNumberBananas(numberBananas - 1) : setNumberBananas(0)}>-</button>
                 <p>{numberBananas}</p>
-                <button type="button" onClick={() => setNumberBananas(numberBananas + 1)}>+</button>
+                <button
+                    type="button"
+                    onClick={() => setNumberBananas(numberBananas + 1)}>+</button>
             </section>
             <section className="add-fruit">
                 <p>Appels</p>
-                <button type="button" onClick={() => numberApples > 0 ? setNumberApples(numberApples - 1) : setNumberApples(0)}>-</button>
+                <button
+                    type="button"
+                    onClick={() => numberApples > 0 ? setNumberApples(numberApples - 1) : setNumberApples(0)}>-</button>
                 <p>{numberApples}</p>
-                <button type="button" onClick={() => setNumberApples(numberApples + 1)}>+</button>
+                <button
+                    type="button"
+                    onClick={() => setNumberApples(numberApples + 1)}>+</button>
             </section>
             <section className="add-fruit">
                 <p>Kiwi's</p>
-                <button type="button" onClick={() => numberKiwis > 0 ? setNumberKiwis(numberKiwis - 1) : setNumberKiwis(0)}>-</button>
+                <button
+                    type="button"
+                    onClick={() => numberKiwis > 0 ? setNumberKiwis(numberKiwis - 1) : setNumberKiwis(0)}>-</button>
                 <p>{numberKiwis}</p>
-                <button type="button" onClick={() => setNumberKiwis(numberKiwis + 1)}>+</button>
+                <button
+                    type="button"
+                    onClick={() => setNumberKiwis(numberKiwis + 1)}>+</button>
             </section>
             <button type="button" onClick={reset}>Reset</button>
         </div>
@@ -166,15 +185,35 @@ function submit(e) {
                         value={formState.conditions}
                         onChange={handleChange}
                     />
-                    <label htmlFor="termsandconditions">Ik ga akkoord met de voorwaarden</label>
+                    <label htmlFor="termsandconditions">Ik ga akoord met de voorwaarden</label>
                 </div>
                 <div>
                     <button
                         type="submit"
                         onClick={submit}>Verzend</button>
                 </div>
-
             </form>
+
+            <Counter
+                text="Aardbeien"
+                name="strawberries"
+
+            />
+            <Counter
+                text="Bananen"
+                name="bananas"
+
+            />
+            <Counter
+                text="Appels"
+                name="apples"
+
+            />
+            <Counter
+                text="Kiwi's"
+                name="kiwis"
+
+            />
         </div>
 
     </>
