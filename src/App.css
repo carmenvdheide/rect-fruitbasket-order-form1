@@ -9,3 +9,8 @@
 button:hover {
     cursor: pointer;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
