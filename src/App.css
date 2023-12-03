@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap');
+
 .add-fruit {
     border: 1px solid black;
     display: flex;
@@ -10,7 +12,38 @@ button:hover {
     cursor: pointer;
 }
 
+.all {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    font-family: 'Prompts', sans-serif;
+    font-weight: 100;
+    color: #193722;
+    margin: 10%;
+}
+
 form {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 400px;
+    background-color: #FCF9ED;
+    border: 2px solid #193722;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #193722;
+}
+
+select {
+    font-family: 'Prompts', sans-serif;
+    font-weight: 300;
+}
+
+.submit {
+    width: 100px;
 }

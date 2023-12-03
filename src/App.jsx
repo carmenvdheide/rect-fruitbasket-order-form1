@@ -53,51 +53,51 @@ function submit(e) {
 
   return (
     <>
-        <div>
-            <h1>Fruitmand bezorgservice</h1>
-            <section className="add-fruit">
-                <p>Aardbeien</p>
-                <button
-                    type="button"
-                    onClick={() => numberStrawberries > 0 ? setNumberStrawberries(numberStrawberries - 1) : setNumberStrawberries(0)}>-</button>
-                <p>{numberStrawberries}</p>
-                <button
-                    type="button"
-                    onClick={() => setNumberStrawberries(numberStrawberries + 1)}>+</button>
-            </section>
-            <section className="add-fruit">
-                <p>Bananen</p>
-                <button
-                    type="button"
-                    onClick={() => numberBananas > 0 ? setNumberBananas(numberBananas - 1) : setNumberBananas(0)}>-</button>
-                <p>{numberBananas}</p>
-                <button
-                    type="button"
-                    onClick={() => setNumberBananas(numberBananas + 1)}>+</button>
-            </section>
-            <section className="add-fruit">
-                <p>Appels</p>
-                <button
-                    type="button"
-                    onClick={() => numberApples > 0 ? setNumberApples(numberApples - 1) : setNumberApples(0)}>-</button>
-                <p>{numberApples}</p>
-                <button
-                    type="button"
-                    onClick={() => setNumberApples(numberApples + 1)}>+</button>
-            </section>
-            <section className="add-fruit">
-                <p>Kiwi's</p>
-                <button
-                    type="button"
-                    onClick={() => numberKiwis > 0 ? setNumberKiwis(numberKiwis - 1) : setNumberKiwis(0)}>-</button>
-                <p>{numberKiwis}</p>
-                <button
-                    type="button"
-                    onClick={() => setNumberKiwis(numberKiwis + 1)}>+</button>
-            </section>
-            <button type="button" onClick={reset}>Reset</button>
-        </div>
-        <div>
+        {/*<div>*/}
+        {/*    <h1>Fruitmand bezorgservice</h1>*/}
+        {/*    <section className="add-fruit">*/}
+        {/*        <p>Aardbeien</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => numberStrawberries > 0 ? setNumberStrawberries(numberStrawberries - 1) : setNumberStrawberries(0)}>-</button>*/}
+        {/*        <p>{numberStrawberries}</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => setNumberStrawberries(numberStrawberries + 1)}>+</button>*/}
+        {/*    </section>*/}
+        {/*    <section className="add-fruit">*/}
+        {/*        <p>Bananen</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => numberBananas > 0 ? setNumberBananas(numberBananas - 1) : setNumberBananas(0)}>-</button>*/}
+        {/*        <p>{numberBananas}</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => setNumberBananas(numberBananas + 1)}>+</button>*/}
+        {/*    </section>*/}
+        {/*    <section className="add-fruit">*/}
+        {/*        <p>Appels</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => numberApples > 0 ? setNumberApples(numberApples - 1) : setNumberApples(0)}>-</button>*/}
+        {/*        <p>{numberApples}</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => setNumberApples(numberApples + 1)}>+</button>*/}
+        {/*    </section>*/}
+        {/*    <section className="add-fruit">*/}
+        {/*        <p>Kiwi's</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => numberKiwis > 0 ? setNumberKiwis(numberKiwis - 1) : setNumberKiwis(0)}>-</button>*/}
+        {/*        <p>{numberKiwis}</p>*/}
+        {/*        <button*/}
+        {/*            type="button"*/}
+        {/*            onClick={() => setNumberKiwis(numberKiwis + 1)}>+</button>*/}
+        {/*    </section>*/}
+        {/*    <button type="button" onClick={reset}>Reset</button>*/}
+        {/*</div>*/}
+        <div className="all">
             <form>
                 <div>
                     <label htmlFor="firstname">Voornaam </label>
@@ -118,7 +118,7 @@ function submit(e) {
                         onChange={handleChange}/>
                 </div>
                 <div>
-                    <label htmlFor="age">Leeftijd</label>
+                    <label htmlFor="age">Leeftijd </label>
                     <input
                         type="text"
                         id="age"
@@ -136,7 +136,7 @@ function submit(e) {
                         onChange={handleChange}/>
                 </div>
                 <div>
-                    <label htmlFor="deliverfrequency">Bezorgfrequentie</label>
+                    <label htmlFor="deliverfrequency">Bezorgfrequentie </label>
                     <select
                         id="deliverfrequency"
                         name="deliverfrequency"
@@ -189,31 +189,30 @@ function submit(e) {
                 </div>
                 <div>
                     <button
+                        className="submit"
                         type="submit"
                         onClick={submit}>Verzend</button>
                 </div>
             </form>
+            <div className="allcounter">
+                <Counter
+                    text="Aardbeien"
+                    name="strawberries"
+                />
+                <Counter
+                    text="Bananen"
+                    name="bananas"
+                />
+                <Counter
+                    text="Appels"
+                    name="apples"
+                />
+                <Counter
+                    text="Kiwi's"
+                    name="kiwis"
+                />
+            </div>
 
-            <Counter
-                text="Aardbeien"
-                name="strawberries"
-
-            />
-            <Counter
-                text="Bananen"
-                name="bananas"
-
-            />
-            <Counter
-                text="Appels"
-                name="apples"
-
-            />
-            <Counter
-                text="Kiwi's"
-                name="kiwis"
-
-            />
         </div>
 
     </>

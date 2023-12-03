@@ -1,6 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;600&display=swap');
+
+p {
+    font-family: 'Prompts', sans-serif;
+    font-weight: 100;
+    color: #193722;
+}
+
+.allcounter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: #FCF9ED;
+    width: 250px;
+    /*margin: 0 30% ;*/
+    padding: 30px;
+    border: #193722 2px solid;
+    border-radius: 20px;
+}
+
 .fruitcounter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 200px;
+    padding: 5px;
+    border: 1px solid #193722;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #749d80;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    height: 35px;
+    width: 20px;
 }

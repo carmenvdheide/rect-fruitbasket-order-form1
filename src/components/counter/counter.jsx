@@ -27,15 +27,18 @@ function Counter({text, name}) {
     return (
         <section className="fruitcounter">
             <p>{text}</p>
-            <button
-                type="button"
-                onClick={() => {numberOfFruits[name] !== 0 ? decrementFruitCount(name) : ""}}
-            >-</button>
-            <p>{numberOfFruits[name]}</p>
-            <button
-                type="button"
-                onClick={() => {incrementFruitCount(name)}}
-            >+</button>
+            <div className="buttons">
+                <button
+                    type="button"
+                    onClick={() => {numberOfFruits[name] !== 0 ? decrementFruitCount(name) : ""}}
+                >-</button>
+                <p>{numberOfFruits[name]}</p>
+                <button
+                    type="button"
+                    onClick={() => {incrementFruitCount(name)}}
+                >+</button>
+            </div>
+
         </section>
     )
 }
